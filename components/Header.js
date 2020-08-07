@@ -15,29 +15,33 @@ function Header() {
     
     //Create Elements
     const header = document.createElement('div');
-    const date = document.createElement('span');
-    const title = document.createElement('h1');
-    const temp = document.createElement('span');
+    const newspaperDate = document.createElement('span');
+    const newspaperTitle = document.createElement('h1');
+    const newspaperTemp = document.createElement('span');
+
+    //Add Classes to Elements
+    header.classList.add('header');
+    newspaperDate.classList.add('date');
+    newspaperTemp.classList.add('temp');
+
+    //Text Content
+    newspaperDate.textContent = 'MARCH 28, 2020';
+    newspaperTitle.textContent = 'Lambda Times';
+    newspaperTemp.textContent = '98°';
 
     //Select Header Container Element
     const headerContainer = document.querySelector('.header-container');
 
-    //Text Content
-    date.textContent = date;
-    title.textContent = 'Lambda Times';
-    temp.textContent = temp;
-
-    //Add Classes to Elements
-    header.classList.add('header');
-    date.classList.add('date');
-    temp.classList.add('temp');
-
     //Append Elements
-    header.append(date);
-    header.append(title);
-    header.append(temp);
+    header.append(newspaperDate);
+    header.append(newspaperTitle);
+    header.append(newspaperTemp);
     headerContainer.append(header);
 
 return header;
 
 }
+
+Header();
+
+
