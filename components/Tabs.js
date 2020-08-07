@@ -12,18 +12,6 @@ import axios from "axios";
 //
 // NOTE: you do _not_ need to install axios as it's included in the HTML via script element
 
-// const newspaperTabsArray = response.data.topics;
-
-// newspaperTabsArray.forEach(tab => {
-//   axios.get('https://lambda-times-api.herokuapp.com/topics')
-// .then(response => {
-//   createTab();
-//   })
-//   .catch(error => {
-//     console.log("The data was not returned. ", error)
-//   });
-// });
-
 axios
   .get("https://lambda-times-api.herokuapp.com/topics")
   .then((response) => {
