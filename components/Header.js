@@ -12,31 +12,31 @@
 // and append it to the DOM inside the div.header-container
 
 function Header() {
-    
-    //Create Elements
-    const header = document.createElement('div');
-    const newspaperDate = document.createElement('span');
-    const newspaperTitle = document.createElement('h1');
-    const newspaperTemp = document.createElement('span');
 
-    //Add Classes to Elements
-    header.classList.add('header');
-    newspaperDate.classList.add('date');
-    newspaperTemp.classList.add('temp');
+//Create Elements
+const header = document.createElement('div');
+const newspaperDate = document.createElement('span');
+const newspaperTitle = document.createElement('h1');
+const newspaperTemp = document.createElement('span');
 
-    //Text Content
-    newspaperDate.textContent = 'MARCH 28, 2020';
-    newspaperTitle.textContent = 'Lambda Times';
-    newspaperTemp.textContent = '98°';
+//Add Classes to Elements
+header.classList.add('header');
+newspaperDate.classList.add('date');
+newspaperTemp.classList.add('temp');
 
-    //Select Header Container Element
-    const headerContainer = document.querySelector('.header-container');
+//Text Content
+newspaperDate.textContent = 'MARCH 28, 2020';
+newspaperTitle.textContent = 'Lambda Times';
+newspaperTemp.textContent = '98°';
 
-    //Append Elements
-    header.append(newspaperDate);
-    header.append(newspaperTitle);
-    header.append(newspaperTemp);
-    headerContainer.append(header);
+//Select Header Container Element
+const headerContainer = document.querySelector('.header-container');
+
+//Append Elements
+header.append(newspaperDate);
+header.append(newspaperTitle);
+header.append(newspaperTemp);
+headerContainer.append(header);
 
 return header;
 
