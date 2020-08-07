@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios from "axios";
 
 // STEP 2: Create tabs
 // -----------------------
@@ -24,40 +24,36 @@ import axios from 'axios';
 //   });
 // });
 
-axios.get('https://lambda-times-api.herokuapp.com/topics')
-.then(response => {
-    // console.log(response)
+axios
+  .get("https://lambda-times-api.herokuapp.com/topics")
+  .then((response) => {
     const newspaperTabs = response.data.topics;
-    // console.log(newspaperTabs)
-    newspaperTabs.forEach(tab => {
-        createTab()
-    })
-})
-    .catch(error => {
-        console.log("The data was not returned. ", error)
+    newspaperTabs.forEach((tab) => {
+      console.log(tab);
+      createTab(tab);
     });
+  })
+  .catch((error) => {
+    console.log("The data was not returned. ", error);
+  });
 
 //    <div class="tab">topic here</div>
 
-    function createTab() {
-    
-        //Create Element
-        const tabs = document.createElement('div');
-    
-        //Add Class to Element
-        tabs.classList.add('topic');
-    
-        //Text Content
-        tabs.textContent = 'TBD';
-    
-        //Select Header Container Element
-        const tabsContainer = document.querySelector('.tabs');
-    
-        //Append Elements
-        tabsContainer.append(tabs);
-    
-    return tabs;
-    
-    }
-    
-    // createTab();
+function createTab(tab) {
+  //Create Element
+  const tabs = document.createElement("div");
+
+  //Add Class to Element
+  tabs.classList.add("tab");
+
+  //Text Content
+  tabs.textContent = tab;
+
+  //Select Header Container Element
+  const tabsContainer = document.querySelector(".topics");
+
+  //Append Elements
+  tabsContainer.appendChild(tabs);
+
+  return tabs;
+}
