@@ -66,9 +66,9 @@ console.log(article)
     const cardContainer = document.querySelector('.cards-container');
 
     //Append Elements
-    imgContainer.append(authorImg);
-    imgContainer.append(authorName);
     author.append(imgContainer);
+    author.append(authorName);
+    imgContainer.append(authorImg);
     card.append(headline);
     card.append(author);
     cardContainer.append(card);
