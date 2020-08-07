@@ -49,14 +49,14 @@ console.log(article)
     const authorImg = document.createElement('img');
     const authorName = document.createElement('span');
 
+    //Add Image Source Attribute
+    authorImg.src = article.authorPhoto;
+
     //Add Class to Element
     card.classList.add('card');
     headline.classList.add('headline');
     author.classList.add('author');
     imgContainer.classList.add('img-container');
-
-    //Add Image Source Attribute
-    authorImg.src = article.authorPhoto;
 
     //Text Content
     headline.textContent = article.headline
@@ -71,7 +71,6 @@ console.log(article)
     author.append(imgContainer);
     card.append(headline);
     card.append(author);
-    card.append(imgContainer);
     cardContainer.append(card);
 
     //Add Event Listener
