@@ -12,31 +12,30 @@ import axios from 'axios';
 //
 // NOTE: you do _not_ need to install axios as it's included in the HTML via script element
 
-// gitHubProfileArray.forEach(username => {
-//     const profileURL = 'https://api.github.com/users/' + username;
-//     axios.get(profileURL)
-//   .then(response => {
-//     createCard(response.data);
-//     })
-//     .catch(error => {
-//       console.log("The data was not returned.", error)
-//     });
-//   });
+// const newspaperTabsArray = response.data.topics;
 
-
-
-// axios.get('https://lambda-times-api.herokuapp.com/topics')
+// newspaperTabsArray.forEach(tab => {
+//   axios.get('https://lambda-times-api.herokuapp.com/topics')
 // .then(response => {
-//     console.log(response)
-//     const newspaperTabs = response.data.topics;
-//     newspaperTabs.forEach(tab => {
-//         createTab()
-//     })
-//     console.log(newspaperTabs);
-// })
-//     .catch(error => {
-//         console.log("The data was not returned. ", error)
-//     });
+//   createTab();
+//   })
+//   .catch(error => {
+//     console.log("The data was not returned. ", error)
+//   });
+// });
+
+axios.get('https://lambda-times-api.herokuapp.com/topics')
+.then(response => {
+    // console.log(response)
+    const newspaperTabs = response.data.topics;
+    // console.log(newspaperTabs)
+    newspaperTabs.forEach(tab => {
+        createTab()
+    })
+})
+    .catch(error => {
+        console.log("The data was not returned. ", error)
+    });
 
 //    <div class="tab">topic here</div>
 
@@ -61,4 +60,4 @@ import axios from 'axios';
     
     }
     
-    createTab();
+    // createTab();
